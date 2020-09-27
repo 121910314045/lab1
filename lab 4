@@ -1,0 +1,99 @@
+#performing linear seacrch-1
+
+def linsearch(b, key):
+
+    for i in range(len(b)):    #lenght of the list
+        if b[i] == key:        #comapring the elements in list with key value
+            return i
+
+
+
+b =[1,2,3,4,5,6,7]
+b = [int(x) for x in b]
+key =2
+
+index = linsearch(b, key)      #calling the function at here
+print(key,"was found at index",index)
+print("if the index printed as none means the list dosent contains given value")
+
+
+
+
+
+C:\Users\Administrator\anaconda3\envs\pythonProject3\python.exe C:/Users/Administrator/PycharmProjects/pythonProject3/zxzx.py
+2 was found at index 1
+if the index printed as none means the list dosent contains given value
+
+Process finished with exit code 0
+
+
+
+
+
+#implementation of bianry search-2
+def binsearc(b, key):
+
+    start = 0                          
+    end = len(b)
+    while start < end:
+        mid = (start + end) // 2    # here we will  get the middle of the list 
+        if b[mid] > key:             #if we found here it gonna be end for search if not then it check in  elif
+            end = mid
+        elif b[mid] < key:              
+            start = mid + 1
+        else:
+            return mid
+
+
+b = input('Enter the sorted list of numbers: ')
+b=b.split()
+b=[int(x) for x in b]
+
+key = int(input('The number to search for: '))
+
+index = binsearc(b, key)
+print("b was found at index",index)
+print("if the index is printed as none then value not found")
+
+
+
+C:\Users\Administrator\anaconda3\envs\pythonProject3\python.exe C:/Users/Administrator/PycharmProjects/pythonProject3/bnnn.py
+Enter the sorted list of numbers: 1 2 3 4
+The number to search for: 2
+b was found at index 1
+if the index is printed as none then value not found
+
+Process finished with exit code 0
+
+
+
+
+
+
+#taking input from use and searching for key value in array-3
+
+def linsearch(b, key):
+
+    for i in range(len(b)):
+        if b[i] == key:
+            return i
+
+
+
+b =input('Enter the list of numbers: ')
+b=b.split()
+b = [int(x) for x in b]
+key =int(input("enter number for search:"))
+
+index = linsearch(b, key)
+print(key,"was found at index",index)
+print("if the index is not printed means the element not found")
+
+
+C:\Users\Administrator\anaconda3\envs\pythonProject3\python.exe C:/Users/Administrator/PycharmProjects/pythonProject3/zxzx.py
+Enter the list of numbers: 1 2 3 4 5 7
+enter number for search:4
+4 was found at index 3
+if the index is not printed means the element not found
+
+Process finished with exit code 0
