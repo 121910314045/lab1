@@ -1,0 +1,139 @@
+#binary with user functions-1
+def binsearc(b, key):
+
+    start = 0
+    end = len(b)
+    while start < end:
+        mid = (start + end) // 2
+        if b[mid] > key:
+            end = mid
+        elif b[mid] < key:
+            start = mid + 1
+        else:
+            return mid
+
+
+b = input('Enter the sorted list of numbers: ')
+b=b.split()
+b=[int(x) for x in b]
+key = int(input('The number to search for: '))
+
+index = binsearc(b, key)     #calling the function
+print("b was found at index",index)
+print("if the index is printed as none then value not found")
+
+
+
+
+
+C:\Users\Administrator\anaconda3\envs\pythonProject3\python.exe C:/Users/Administrator/PycharmProjects/pythonProject3/bnnn.py
+Enter the sorted list of numbers: 1 2 3 4
+The number to search for: 2
+b was found at index 1
+if the index is printed as none then value not found
+
+Process finished with exit code 0
+
+
+
+
+
+
+
+
+
+
+#taking input from user and doing bianry search-2
+
+def binsearc(b, key):
+
+    start = 0
+    end = len(b)
+    while start < end:
+        mid = (start + end) // 2
+        if b[mid] > key:
+            end = mid
+        elif b[mid] < key:
+            start = mid + 1
+        else:
+            return mid
+
+
+b = input('Enter the sorted list of numbers: ')
+b=b.split()
+b=[int(x) for x in b]
+key = int(input('The number to search for: '))
+
+index = binsearc(b, key)
+print("b was found at index",index)
+print("if the index is printed as none then value not found")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\Administrator\anaconda3\envs\pythonProject3\python.exe C:/Users/Administrator/PycharmProjects/pythonProject3/bnnn.py
+Enter the sorted list of numbers: 1 2 3 4
+The number to search for: 2
+b was found at index 1
+if the index is printed as none then value not found
+
+Process finished with exit code 0
+
+
+
+
+
+
+
+
+
+
+#3
+def bsearch(lys, val):
+    first = 0
+    last = len(lys)-1
+    i = -1
+    while (first <= last):
+        mid = (first+last)//2
+        if lys[mid] == val:
+            i = mid
+            break
+        else:
+            if val<lys[mid]:
+                last = mid -1
+            else:
+                first = mid +1
+    return i
+
+k=[int(x) for x in input("Enter multiple value: ").strip().split()]
+k.sort()
+f=int(input("enter the element to be searched"))
+print(bsearch(k,f)) 
+
+
+
+output:
+Enter multiple value: 1 2 3 4 5
+enter the element to be searched2
+1
+
+Enter multiple value:  9 2 4 3 5 7 5 5 4  5 666 6 77 88
+enter the element to be searched7
+5
+
+Enter multiple value: 1 2 3 4 5 6 7 8 94532 4 5
+enter the element to be searched1
+0
