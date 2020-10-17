@@ -289,4 +289,5 @@ for i in range(10):
         if i == 6:
             print("exited")
             exit()
-     
+     OUTPUT
+     Enter the your choice 1. create a linked list and inserting element, 2. Search the element, 3. sort the element,4.reverse the linked list, 5.delete from the linked list 6.exit  
